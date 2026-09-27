@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Green Book | کتابخانه سبز</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap');
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Vazirmatn,Tahoma,sans-serif;background:#f4faef;color:#173a29}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(#5aa365 1px,transparent 1px);background-size:24px 24px}
+.top{background:#103b28;color:#e4f6e2;text-align:center;padding:8px;font-size:12px}
+header{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(15px);border-bottom:1px solid #dbe9d8;padding:14px 5%;display:flex;align-items:center;gap:20px}
+.logo{font-family:"Playfair Display",serif;font-size:29px;color:#173a29;text-decoration:none;line-height:.85;min-width:155px}.logo b{color:#24a34e}.logo small{display:block;font:10px Vazirmatn;color:#779080;margin-top:8px}
+nav{display:flex;gap:5px;flex-wrap:wrap;margin-right:auto}nav button{border:0;background:transparent;color:#4b6657;padding:9px 12px;border-radius:12px;font:600 13px Vazirmatn;cursor:pointer}nav button:hover,nav button.active{background:#e2f2df;color:#218747}
+.actions{display:flex;gap:7px}.iconbtn{border:1px solid #d3e4d1;background:#fff;border-radius:12px;padding:9px 12px;cursor:pointer;color:#21683d}
+main{min-height:calc(100vh - 130px)}section{padding:68px 7%;position:relative}.hero{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;padding:80px 8%;background:radial-gradient(circle at 80% 30%,#cceac8,transparent 28%),linear-gradient(135deg,#f9fcf5,#dfefdb);overflow:hidden}
+.hero h1{font-size:74px;line-height:1;margin:15px 0;color:#143a27}.hero h1 span{color:#29a151}.hero p{font-size:16px;line-height:2;color:#63756a;max-width:650px}.pill,.eyebrow{font-size:11px;font-weight:900;color:#29974e;letter-spacing:.5px}.buttons{display:flex;gap:10px;margin-top:25px;flex-wrap:wrap}.btn{border:0;border-radius:14px;padding:13px 20px;font:800 13px Vazirmatn;cursor:pointer;text-decoration:none;display:inline-block}.primary{background:#299d4f;color:#fff;box-shadow:0 12px 25px #1e7d3a2c}.ghost{background:#fff;border:1px solid #a9c9ad;color:#276b3c}.stats{display:flex;gap:35px;margin-top:32px}.stats b{font-size:22px;color:#218a46;display:block}.stats span{font-size:10px;color:#829086}
+.visual{height:430px;display:flex;align-items:center;justify-content:center;position:relative}.moon{width:330px;height:330px;border-radius:50%;background:#d5edcf;border:2px solid #a5ce9f;box-shadow:inset 0 0 60px #77b87744,0 25px 60px #173d2820}.book{position:absolute;width:235px;height:295px;border-radius:7px 18px 18px 7px;background:linear-gradient(145deg,#1e5d38,#49a75e);box-shadow:20px 25px 40px #163d2735;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-size:26px;font-weight:900;transform:rotate(-8deg);padding:25px}.book:after{content:"GREEN BOOK";position:absolute;bottom:19px;font:10px "Playfair Display";opacity:.7}.leaf{position:absolute;font-size:52px}.l1{top:20px;right:8%}.l2{bottom:25px;left:8%}
+h2{font-size:35px;margin:7px 0 25px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.feature,.card,.panel,.contact{background:#fff;border:1px solid #dce9da;border-radius:20px}.feature{padding:23px;text-decoration:none;color:#173a29}.feature .ico{font-size:35px}.feature h3{margin:9px 0 5px}.feature p,.contact p,.panel p{font-size:12px;color:#76857b;line-height:1.9}.green{background:#dfefdb}.bookgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.card{overflow:hidden;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 15px 35px #173d2415}.cover{height:205px;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;color:white;font-size:22px;font-weight:900;background:linear-gradient(145deg,#205e39,#63af65)}.c2{background:linear-gradient(145deg,#66502e,#c5a064)}.c3{background:linear-gradient(145deg,#394651,#8999a8)}.c4{background:linear-gradient(145deg,#632d48,#bb718d)}.c5{background:linear-gradient(145deg,#3f6343,#9aba73)}.info{padding:15px}.info h3{font-size:14px;margin:0 0 5px}.info p{font-size:10px;color:#78857c;margin:0}.price{display:block;color:#238d48;font-weight:900;margin-top:9px}.cardrow{display:flex;gap:6px;margin-top:10px}.cardrow button{flex:1;border:0;border-radius:9px;padding:8px;background:#e8f4e6;color:#276c3c;font:700 11px Vazirmatn;cursor:pointer}
+.page{display:none;padding:60px 7%;min-height:760px}.page.active{display:block}.title{margin-bottom:30px}.title h1{font-size:48px;margin:7px 0}.title p{color:#718077;line-height:1.9;max-width:800px}.tools{display:grid;grid-template-columns:2fr 1fr 1fr;gap:9px;background:#fff;border:1px solid #dce8da;border-radius:17px;padding:11px;margin-bottom:12px}.tools input,.tools select,.form input,.form textarea,.form select{width:100%;padding:12px;border:1px solid #d5e2d4;background:#fbfdf9;border-radius:11px;font:inherit;outline:none}.meta{display:flex;justify-content:space-between;font-size:11px;color:#7d8981;margin:10px 0 18px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}.form,.panel{padding:26px}.form label{display:block;font-size:12px;font-weight:800;margin:0 0 13px}.form input,.form select,.form textarea{margin-top:7px}.used{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.used .card{padding:22px}.tag{font-size:10px;color:#29934c;font-weight:900}.about{background:linear-gradient(135deg,#dff0da,#fbfdf7);border:1px solid #d5e7d2;border-radius:25px;padding:40px}.support{background:#143d2b;color:white;border-radius:24px;padding:35px;text-align:center}.support p{color:#bdd4c3}.faq{display:grid;gap:9px}.faq details{background:#fff;border:1px solid #dce9da;border-radius:13px;padding:15px}.faq summary{font-weight:800;cursor:pointer}
+footer{background:#0e3022;color:#d9e9dd;padding:42px 7%;display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}footer p,footer a{font-size:11px;color:#adc3b4;text-decoration:none}footer b{color:#79c884}
+#toast{position:fixed;bottom:22px;left:22px;background:#123b29;color:#fff;padding:13px 17px;border-radius:13px;opacity:0;transform:translateY(10px);transition:.25s;z-index:99}.show{opacity:1!important;transform:translateY(0)!important}
+@media(max-width:950px){.hero{grid-template-columns:1fr}.visual{display:none}.grid4,.bookgrid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.used{grid-template-columns:1fr 1fr}nav{display:none}header{flex-wrap:wrap}.logo{min-width:auto}}
+@media(max-width:600px){.hero h1{font-size:49px}.hero{padding:55px 6%}section,.page{padding:45px 5%}.grid4,.bookgrid,.used{grid-template-columns:1fr}.tools{grid-template-columns:1fr}.stats{gap:17px}.title h1{font-size:36px}footer{grid-template-columns:1fr}.actions{margin-right:auto}}
+</style>
+</head>
+<body>
+<div class="top">🌿 Green Book • خرید، امانت و کتاب‌های دست‌دوم • بیش از ۱۰۰۰ عنوان</div>
+<header>
+<a class="logo" href="#" onclick="go('home')"><b>Green</b> Book<small>کتابخانه‌ای برای آدم‌های قصه‌دوست</small></a>
+<nav>
+<button data-page="home" onclick="go('home')">خانه</button>
+<button data-page="catalog" onclick="go('catalog')">کتاب‌ها</button>
+<button data-page="services" onclick="go('services')">خدمات</button>
+<button data-page="about" onclick="go('about')">درباره ما</button>
+<button data-page="contact" onclick="go('contact')">ارتباط با ما</button>
+</nav>
+<div class="actions"><button class="iconbtn" onclick="showCart()">🛒 <span id="cartCount">0</span></button></div>
+</header>
+
+<main>
+<section id="home" class="page active" style="padding:0">
+<div class="hero">
+<div><span class="pill">✦ به کتابخانه فانتزی Green Book خوش آمدی ✦</span><h1>یک کتاب،<br><span>هزار جهان.</span></h1><p>خرید آنلاین کتاب، امانت، بازار کتاب‌های دست‌دوم و کشف ادبیات روسیه، فرانسه و ایران؛ همه در یک فضای سبز و جادویی.</p><div class="buttons"><button class="btn primary" onclick="go('catalog')">کشف کتاب‌ها ←</button><button class="btn ghost" onclick="go('services')">امانت کتاب</button></div><div class="stats"><div><b>۱۰۰۰+</b><span>عنوان کتاب</span></div><div><b>۳۰۰+</b><span>نویسنده</span></div><div><b>۲۴/۷</b><span>ثبت سفارش</span></div></div></div>
+<div class="visual"><div class="moon"></div><div class="book">داستان‌هایی<br>که فراموش<br>نمی‌شوند</div><div class="leaf l1">🌿</div><div class="leaf l2">🍃</div></div>
+</div>
+<section><div class="eyebrow">جادوی کتابخانه</div><h2>هر چیزی که لازم داری</h2><div class="grid4">
+<a class="feature" href="#" onclick="go('catalog')"><span class="ico">📚</span><h3>کتاب‌های متنوع</h3><p>بیش از هزار عنوان از ادبیات روسیه، فرانسه، ایران و جهان.</p></a>
+<a class="feature" href="#" onclick="go('services')"><span class="ico">🔖</span><h3>امانت کتاب</h3><p>کتاب موردنظرت را انتخاب و درخواست امانت ثبت کن.</p></a>
+<a class="feature" href="#" onclick="go('services')"><span class="ico">♻️</span><h3>بازار دست‌دوم</h3><p>کتاب‌های سالم مشتری‌ها را دوباره وارد چرخه مطالعه کن.</p></a>
+<a class="feature" href="#" onclick="go('contact')"><span class="ico">🪄</span><h3>پشتیبانی و پیشنهادات</h3><p>انتقاد، پیشنهاد و مشکل سایت را مستقیم برای ما بفرست.</p></a>
+</div></section>
+<section class="green"><div class="eyebrow">انتخاب سردبیر</div><h2>چند کتاب برای شروع</h2><div id="homeBooks" class="bookgrid"></div></section>
+</section>
+
+<section id="catalog" class="page">
+<div class="title"><span class="eyebrow">BOOK LIBRARY</span><h1>کتابخانه Green Book</h1><p>در میان بیش از ۱۰۰۰ عنوان جست‌وجو کن. کافکا، داستایوفسکی، آلبر کامو، صادق هدایت، عباس معروفی و نویسندگان ادبیات روسیه، فرانسه و ایران.</p></div>
+<div class="tools"><input id="search" oninput="filterBooks()" placeholder="🔎 نام کتاب، نویسنده یا ژانر..."><select id="genre" onchange="filterBooks()"><option value="">همه ژانرها</option><option>ادبیات روسیه</option><option>ادبیات فرانسه</option><option>ادبیات ایران</option><option>کلاسیک</option><option>رمان</option><option>داستان کوتاه</option><option>فلسفه</option></select><select id="sort" onchange="filterBooks()"><option value="">مرتب‌سازی</option><option value="cheap">ارزان‌ترین</option><option value="expensive">گران‌ترین</option></select></div>
+<div class="meta"><span id="resultCount"></span><span>کاتالوگ: ۱۰۰۰+ عنوان</span></div><div id="catalogGrid" class="bookgrid"></div>
+</section>
+
+<section id="services" class="page">
+<div class="title"><span class="eyebrow">SERVICES</span><h1>خرید، امانت و دست‌دوم</h1><p>Green Book فقط یک فروشگاه نیست؛ یک چرخه کوچک برای پیدا کردن، خواندن و دوباره به اشتراک گذاشتن کتاب‌هاست.</p></div>
+<div class="two"><form class="form" onsubmit="submitForm(event,'درخواست امانت ثبت شد؛ پشتیبانی با شما تماس می‌گیرد.')"><h2>🔖 درخواست امانت</h2><label>نام و نام خانوادگی<input required placeholder="نام شما"></label><label>شماره تماس<input required placeholder="09xxxxxxxxx"></label><label>کتاب موردنظر<select id="loanBook"></select></label><label>مدت امانت<select><option>۷ روز</option><option>۱۴ روز</option><option>۲۱ روز</option><option>۳۰ روز</option></select></label><button class="btn primary">ثبت درخواست</button></form>
+<div class="panel"><h2>♻️ کتاب دست‌دوم</h2><p>کتاب‌های سالم مشتری‌ها را با قیمت مناسب دوباره به چرخه مطالعه برگردان.</p><div id="usedGrid" class="used"></div><h3>فروش کتاب خودت</h3><form onsubmit="submitForm(event,'کتاب برای بررسی ثبت شد.')"><input class="form input" required placeholder="نام کتاب"><input class="form input" required placeholder="شماره تماس" style="margin-top:8px"><button class="btn primary" style="margin-top:8px">ثبت کتاب برای فروش</button></form></div></div>
+</section>
+
+<section id="about" class="page">
+<div class="about"><span class="eyebrow">ABOUT GREEN BOOK</span><h1>یک کتابخانه سبز، کمی جادویی.</h1><p>Green Book با هدف جمع کردن خرید کتاب، امانت و بازار کتاب‌های دست‌دوم در یک تجربه ساده و فانتزی طراحی شده است.</p><h2>قفسه‌های ما</h2><div class="grid4"><div class="feature"><span class="ico">🇷🇺</span><h3>ادبیات روسیه</h3><p>داستایوفسکی، تولستوی، چخوف و دیگر نویسندگان.</p></div><div class="feature"><span class="ico">🇫🇷</span><h3>ادبیات فرانسه</h3><p>آلبر کامو، فلوبر، سنت اگزوپری و دیگران.</p></div><div class="feature"><span class="ico">🇮🇷</span><h3>ادبیات ایران</h3><p>صادق هدایت، عباس معروفی و نویسندگان ایرانی.</p></div><div class="feature"><span class="ico">🌍</span><h3>ادبیات جهان</h3><p>کلاسیک‌ها و آثار محبوب از سراسر جهان.</p></div></div></div>
+</section>
+
+<section id="contact" class="page">
+<div class="title"><span class="eyebrow">CONTACT & SUPPORT</span><h1>ارتباط با ما</h1><p>برای سفارش، امانت، پشتیبانی سایت، انتقاد، پیشنهاد یا معرفی کتاب با ما در ارتباط باش.</p></div>
+<div class="two"><div><div class="contact" style="padding:25px;margin-bottom:15px"><h2>📞 تماس</h2><p>شماره پشتیبانی و ارتباط با ما:</p><a class="btn primary" href="tel:09904711802">09904711802</a></div><div class="contact" style="padding:25px"><h2>🌱 طراحی سایت</h2><p>این سایت طراحی شده توسط <b>بردیا سلیمی</b>.</p></div></div>
+<form class="form" onsubmit="submitForm(event,'پیام شما با موفقیت ثبت شد.')"><h2>💬 انتقادات و پیشنهادات</h2><label>نام<input required placeholder="نام شما"></label><label>راه ارتباطی<input required placeholder="شماره تماس یا ایمیل"></label><label>نوع پیام<select><option>پیشنهاد</option><option>انتقاد</option><option>مشکل سایت</option><option>پیشنهاد کتاب</option></select></label><label>پیام<textarea required rows="7" placeholder="پیامتان را بنویسید..."></textarea></label><button class="btn primary">ارسال پیام</button></form></div>
+</section>
+</main>
+
+<footer><div><b>Green Book</b><p>یک گوشه سبز برای عاشق‌های کتاب.</p></div><div><b>دسترسی سریع</b><p><a href="#" onclick="go('home')">خانه</a></p><p><a href="#" onclick="go('catalog')">کتاب‌ها</a></p><p><a href="#" onclick="go('services')">خدمات</a></p></div><div><b>ارتباط</b><p>09904711802</p><p>طراحی شده توسط <b>بردیا سلیمی</b></p></div></footer>
+<div id="toast"></div>
+<script>
+const base=[
+["مسخ","فرانتس کافکا","ادبیات اروپا",185000,"c1"],["محاکمه","فرانتس کافکا","ادبیات اروپا",210000,"c2"],["قصر","فرانتس کافکا","کلاسیک",240000,"c3"],
+["جنایت و مکافات","فئودور داستایوفسکی","ادبیات روسیه",330000,"c1"],["برادران کارامازوف","فئودور داستایوفسکی","ادبیات روسیه",390000,"c2"],["ابله","فئودور داستایوفسکی","ادبیات روسیه",290000,"c3"],["شب‌های روشن","فئودور داستایوفسکی","ادبیات روسیه",185000,"c4"],
+["بیگانه","آلبر کامو","ادبیات فرانسه",220000,"c4"],["طاعون","آلبر کامو","ادبیات فرانسه",280000,"c1"],["سقوط","آلبر کامو","ادبیات فرانسه",195000,"c2"],
+["بوف کور","صادق هدایت","ادبیات ایران",180000,"c4"],["سه قطره خون","صادق هدایت","ادبیات ایران",165000,"c1"],["زنده به گور","صادق هدایت","ادبیات ایران",155000,"c3"],
+["سمفونی مردگان","عباس معروفی","ادبیات ایران",270000,"c2"],["سال بلوا","عباس معروفی","ادبیات ایران",255000,"c4"],["پیکر فرهاد","عباس معروفی","ادبیات ایران",230000,"c1"],
+["آنا کارنینا","لئو تولستوی","ادبیات روسیه",370000,"c1"],["جنگ و صلح","لئو تولستوی","ادبیات روسیه",490000,"c3"],["مرشد و مارگاریتا","بولگاکف","ادبیات روسیه",320000,"c4"],
+["مادام بوواری","گوستاو فلوبر","ادبیات فرانسه",310000,"c2"],["شازده کوچولو","سنت اگزوپری","ادبیات فرانسه",175000,"c4"],
+["چشم‌هایش","بزرگ علوی","ادبیات ایران",210000,"c1"],["مدیر مدرسه","جلال آل احمد","ادبیات ایران",170000,"c3"],["کلیدر","محمود دولت‌آبادی","ادبیات ایران",560000,"c2"]];
+const titles=["صد سال تنهایی","کوری","۱۹۸۴","قلعه حیوانات","غرور و تعصب","بلندی‌های بادگیر","دن کیشوت","اولیس","مرگ ایوان ایلیچ","یادداشت‌های زیرزمینی","دل سگ","دکتر ژیواگو","پیرمرد و دریا","خشم و هیاهو","گتسبی بزرگ","ربه‌کا","شوهر آهو خانم","چراغ‌ها را من خاموش می‌کنم","سووشون","مدار صفر درجه","روی ماه خداوند را ببوس","داستان یک شهر","من او","چراغ‌ها"];
+const authors=["گابریل گارسیا مارکز","ژوزه ساراماگو","جورج اورول","جین آستن","امیلی برونته","میگل د سروانتس","مارسل پروست","آنتوان چخوف","تورگنیف","لئو تولستوی","بولگاکف","ارنست همینگوی","ویلیام فاکنر","دافنه دوموریه","بزرگ علوی","جلال آل احمد","محمود دولت‌آبادی","زویا پیرزاد"];
+const genres=["ادبیات روسیه","ادبیات فرانسه","ادبیات ایران","کلاسیک","رمان","داستان کوتاه","فلسفه"];
+const books=[...base];
+for(let i=base.length;i<1200;i++) books.push([titles[i%titles.length]+" "+(Math.floor(i/titles.length)+1),authors[i%authors.length],genres[i%genres.length],95000+(i*137)%490000,"c"+(i%5+1)]);
+
+function card(b){return `<article class="card"><div class="cover ${b[4]}">${b[0]}</div><div class="info"><h3>${b[0]}</h3><p>${b[1]} • ${b[2]}</p><span class="price">${b[3].toLocaleString()} تومان</span><div class="cardrow"><button onclick='addCart(${JSON.stringify(b[0])},${b[3]})'>🛒 خرید</button><button onclick='fav(${JSON.stringify(b[0])})'>♡</button></div></div></article>`}
+function filterBooks(){let q=(document.getElementById("search")?.value||"").toLowerCase(),g=document.getElementById("genre")?.value||"",s=document.getElementById("sort")?.value||"",a=books.filter(b=>(!q||(b[0]+" "+b[1]+" "+b[2]).toLowerCase().includes(q))&&(!g||b[2]===g));if(s==="cheap")a.sort((x,y)=>x[3]-y[3]);if(s==="expensive")a.sort((x,y)=>y[3]-x[3]);let shown=a.slice(0,24);document.getElementById("catalogGrid").innerHTML=shown.map(card).join("");document.getElementById("resultCount").textContent=`${a.length.toLocaleString()} نتیجه از ${books.length.toLocaleString()} عنوان`}
+function go(id){document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));document.getElementById(id).classList.add("active");document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("active",x.dataset.page===id));window.scrollTo({top:0,behavior:"smooth"});if(id==="catalog")filterBooks()}
+function cart(){return JSON.parse(localStorage.getItem("gb_cart")||"[]")}function saveCart(c){localStorage.setItem("gb_cart",JSON.stringify(c));document.getElementById("cartCount").textContent=c.length}
+function addCart(n,p){let c=cart();c.push({name:n,price:p});saveCart(c);toast("کتاب به سبد خرید اضافه شد")}
+function fav(n){let f=JSON.parse(localStorage.getItem("gb_fav")||"[]");if(!f.includes(n))f.push(n);localStorage.setItem("gb_fav",JSON.stringify(f));toast("به علاقه‌مندی‌ها اضافه شد")}
+function showCart(){let c=cart(),sum=c.reduce((s,x)=>s+x.price,0);alert(c.length?`سبد خرید (${c.length} کتاب)\\n\\n${c.map(x=>"• "+x.name).join("\\n")}\\n\\nمجموع: ${sum.toLocaleString()} تومان`:"سبد خرید خالی است")}
+function toast(t){let e=document.getElementById("toast");e.textContent=t;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),2300)}
+function submitForm(e,msg){e.preventDefault();e.target.reset();toast(msg)}
+function init(){document.getElementById("homeBooks").innerHTML=books.slice(0,8).map(card).join("");filterBooks();document.getElementById("cartCount").textContent=cart().length;document.getElementById("loanBook").innerHTML=books.slice(0,80).map(b=>`<option>${b[0]} — ${b[1]}</option>`).join("");let u=[["بوف کور","صادق هدایت",95000],["سمفونی مردگان","عباس معروفی",145000],["بیگانه","آلبر کامو",120000],["جنایت و مکافات","داستایوفسکی",175000],["مسخ","کافکا",80000],["شب‌های روشن","داستایوفسکی",110000]];document.getElementById("usedGrid").innerHTML=u.map(x=>`<div class="card" style="padding:16px"><span class="tag">♻️ دست‌دوم</span><h3>${x[0]}</h3><p>${x[1]} • وضعیت عالی</p><span class="price">${x[2].toLocaleString()} تومان</span><div class="cardrow"><button onclick='addCart(${JSON.stringify(x[0])},${x[2]})'>خرید</button></div></div>`).join("")}
+init();
+</script>
+</body>
+</html>
